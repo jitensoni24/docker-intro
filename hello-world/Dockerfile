@@ -3,7 +3,7 @@
 FROM ubuntu:16.04
 
 # Author
-MAINTAINER pictolearn
+MAINTAINER jitendra
 
 # RUN COMMAND BASICALLY runs the command in the terminal and creates an image.
 # Install all the updates for UBUNTU
@@ -36,3 +36,4 @@ RUN cd /usr/local/hello-world && mvn assembly:assembly
 #THE CMD COMMAND tells docker the command to run when the container is started up from the image. In this case we are
 # executing the java program as is to print Hello World.
 CMD ["java", "-cp", "/usr/local/hello-world/target/hello-world-0.0.1-jar-with-dependencies.jar", "com.dtech.doc.HelloWorldDocker"]
+
