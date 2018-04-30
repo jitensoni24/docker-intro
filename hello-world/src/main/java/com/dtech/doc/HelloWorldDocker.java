@@ -11,7 +11,7 @@ public class HelloWorldDocker
         for(int i = 0; i<10; i++) {
         	try {
 				System.out.println("docker hello world " + i);
-				Thread.sleep(5000);
+				Thread.sleep(10000);
 			} catch (Exception e) {}
         }
     }
