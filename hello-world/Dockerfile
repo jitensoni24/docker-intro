@@ -3,7 +3,7 @@
 FROM ubuntu:16.04
 
 # Author
-MAINTAINER jitendra
+MAINTAINER jitendra soni
 
 # RUN COMMAND BASICALLY runs the command in the terminal and creates an image.
 # Install all the updates for UBUNTU
@@ -17,7 +17,6 @@ RUN add-apt-repository ppa:webupd8team/java
 
 # INSTALL THE VI EDITOR AND MYSQL-CLIENT
 RUN apt-get install -y vim
-RUN apt-get install -y mysql-client
 
 #INSTALL ORACLE JDK 8 BY ACCEPTING YES
 RUN echo "oracle-java8-installer shared/accepted-oracle-license-v1-1 boolean true" | debconf-set-selections
