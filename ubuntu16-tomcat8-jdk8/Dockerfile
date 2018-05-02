@@ -5,7 +5,7 @@ MAINTAINER jit
 
 #Download the latest version of 7.x
 #Verify the version exists here or else change it: http://apache.rediris.es/tomcat/tomcat-7
-ENV TOMCAT_VERSION 7.0.86
+ENV TOMCAT_VERSION 8.5.30
 
 # Run an update to get all the security patches
 RUN apt-get -y update && apt-get -y upgrade
@@ -24,9 +24,9 @@ RUN add-apt-repository ppa:openjdk-r/ppa
 RUN apt-get update -y
 
 # only after update
-RUN apt-get install -y openjdk-7-jdk
+RUN apt-get install -y openjdk-8-jdk
 
-ENV JAVA_HOME /usr/lib/jvm/java-1.7.0-openjdk-amd64
+ENV JAVA_HOME /usr/lib/jvm/java-1.8.0-openjdk-amd64
 
 # Get Tomcat, same RUN command across multiple lines
 RUN wget --quiet --no-cookies http://apache.rediris.es/tomcat/tomcat-7/v${TOMCAT_VERSION}/bin/apache-tomcat-${TOMCAT_VERSION}.tar.gz -O /tmp/tomcat.tgz && tar xzvf /tmp/tomcat.tgz -C /opt
