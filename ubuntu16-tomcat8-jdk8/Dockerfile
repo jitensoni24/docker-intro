@@ -12,10 +12,10 @@ RUN apt-get -y update && apt-get -y upgrade
 
 #RUN use this to run the command in the terminal
 #Update the ubuntu to latest fixes and patches
-RUN apt-get update && apt-get install -y python-software-properties software-properties-common
+RUN apt-get update && apt-get install -y software-properties-common
 
 #Install CURL and VIM editors
-RUN apt-get -y install curl wget vim iputils-ping top free
+RUN apt-get -y install curl wget vim iputils-ping top free apt-utils
 
 # OPEN JDK Installation repository 
 RUN add-apt-repository ppa:openjdk-r/ppa
@@ -35,6 +35,3 @@ RUN mv /opt/apache-tomcat-${TOMCAT_VERSION} /opt/tomcat
 #remove temporary and unwanted folders
 RUN rm /tmp/tomcat.tgz && rm -rf /opt/tomcat/webapps/examples && rm -rf /opt/tomcat/webapps/docs
 #RUN rm -rf /opt/tomcat/webapps/ROOT
-
-# after the repository has been added.
-RUN apt-get update -y
