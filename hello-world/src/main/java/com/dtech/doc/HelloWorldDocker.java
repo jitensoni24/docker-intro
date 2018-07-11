@@ -10,7 +10,8 @@ public class HelloWorldDocker
     {
         for(int i = 0; i<10; i++) {
         	try {
-				System.out.println("docker hello world " + i);
+				System.out.println("docker hello world : " + i);
+				
 				Thread.sleep(10000);
 			} catch (Exception e) {}
         }
